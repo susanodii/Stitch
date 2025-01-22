@@ -14,7 +14,7 @@ import WhatClientSay from "./WhatClientSay";
 
 function Home() {
   return (
-    <main className='min-h-screen h-full pl-[4rem] pr-[4.5rem]'>
+    <main className='min-h-screen h-full pl-[2rem] pr-[2rem] sm:pl-[4rem] sm:pr-[4.5rem]'>
       <Hero />
       <Review />
       <TopRated />
