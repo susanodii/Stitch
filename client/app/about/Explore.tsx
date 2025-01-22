@@ -21,11 +21,11 @@ const Explore = () => {
         <p className='font-secondaryNormal font-normal text-[16px] leading-[24px] mt-[1rem] '>
           Stitch revolutionizes the fashion industry by connecting customers
           with talented fashion designers and bespoke Tailor. With AI-powered
-          size recommendations, you'll find your ideal outfit effortlessly.
+          size recommendations, you will find your ideal outfit effortlessly.
           Explore a vast collection of unique designs and enjoy custom designs,
           from traditional Aso-Oke to contemporary styles. Support local
           craftsmanship while enjoying a seamless shopping experience. Stitch is
-          more than just an app; it's your personal stylist and fashion
+          more than just an app, it is your personal stylist and fashion
           marketplace.
         </p>
 
