@@ -36,8 +36,8 @@ const Review: React.FC = () => {
   return (
     // <div className='flex justify-around items-center  w-11/12 h-[191px] m-auto font-playfair bg-lightGray'>
     <div className='flex flex-col gap-[2rem]  sm:flex-row justify-around items-center w-11/12 max-w-[1200px] min-h-[150px] sm:min-h-[191px] m-auto p-4 sm:p-6 font-playfair bg-lightGray sm:gap-4'>
-      {reviewDetails.map((data) => (
-        <ReviewData data={data} />
+      {reviewDetails.map((data, index) => (
+        <ReviewData data={data} key={index} />
       ))}
     </div>
   );
