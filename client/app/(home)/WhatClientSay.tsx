@@ -2,116 +2,91 @@ import React from "react";
 import Image from "next/image";
 
 const WhatClientSay = () => {
+  const details = [
+    {
+      image: "/assets/images/Female.png",
+      name: "Linda Eze",
+      occupation: "Entrepreneur",
+      review: "Thanks to Stitch, I got my desired wears from a nearby Tailor",
+      bg: "#8B9467",
+      text: "#FFFFFF",
+      icon: "/assets/images/client-say-qtn.png",
+    },
+    {
+      image: "/assets/images/Female.png",
+      name: "Linda Eze",
+      occupation: "Entrepreneur",
+      review: "Thanks to Stitch, I got my desired wears from a nearby Tailor",
+      text: "black",
+      bg: "#FFFFFF",
+      icon: "/assets/images/client-say-qtn.png",
+    },
+    {
+      image: "/assets/images/Female.png",
+      name: "Linda Eze",
+      occupation: "Entrepreneur",
+      review: "Thanks to Stitch, I got my desired wears from a nearby Tailor",
+      bg: "#8B9467",
+      text: "#FFFFFF",
+      icon: "/assets/images/client-say-qtn.png",
+    },
+  ];
+
   return (
-    <main className='mt-[6rem]'>
-      <h2 className='text-center font-extrabold leading-[61.45px] text-[48px] font-playfair'>
-        {" "}
+    <main className='mt-[6rem] px-4 sm:px-8'>
+      <h2 className='text-center font-extrabold leading-[61.45px] text-[48px] sm:text-[36px] font-playfair'>
         What Our Clients Say
       </h2>
-      <section className=' flex justify-center gap-4 mt-[2rem]'>
-        <div className=' border border-gray-300 rounded-tl-3xl rounded-br-3xl w-80 h-72 p-2 overflow-hidden bg-[#8B9467]'>
-          <div className='flex gap-6 items-center'>
-            <div className=' m-1 w-[100px] h-[100px] rounded-full overflow-hidden ml-'>
-              <Image
-                width={267.37}
-                height={193}
-                alt='logo-sticth'
-                src={"/assets/images/Female.png"}
-              />
+
+      <section className='mt-[2rem] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-center place-items-center '>
+        {details.map((data, index) => (
+          <div
+            key={index}
+            className='border border-gray-300 rounded-tl-3xl rounded-br-3xl w-full sm:w-80 p-4 overflow-hidden shadow-lg'
+            style={{ backgroundColor: data.bg }}
+          >
+            {/* User Info */}
+            <div className='flex items-center gap-4'>
+              <div className='w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rounded-full overflow-hidden'>
+                <Image
+                  width={100}
+                  height={100}
+                  alt='client-profile'
+                  src={data.image}
+                  className='w-full h-full object-cover'
+                />
+              </div>
+
+              <div>
+                <h4
+                  className='font-extrabold font-playfair text-[20px] sm:text-[24px] leading-[30.73px]'
+                  style={{ color: data.text }}
+                >
+                  {data.name}
+                </h4>
+                <p
+                  className='font-secondaryBold font-medium leading-[30.73px] text-[16px] sm:text-[20px]'
+                  style={{ color: data.text }}
+                >
+                  {data.occupation}
+                </p>
+              </div>
             </div>
 
-            <div className=''>
-              <h4 className='font-extrabold font-playfair text-white text-[24px]  leading-[30.73px]'>
-                Linda Eze
-              </h4>
-              <p className='font-secondaryBold font-medium text-white leading-[30.73px] text-[24px]'>
-                Entrepreneur
-              </p>
+            {/* Review Text */}
+            <p
+              className='mt-4 font-secondaryBold font-medium leading-[30px] text-[16px] sm:text-[20px]'
+              style={{ color: data.text }}
+            >
+              {data.review}
+            </p>
+
+            {/* Quote Icon */}
+            <div className='flex justify-end'>
+              <Image width={40} height={40} alt='quote-icon' src={data.icon} />
             </div>
           </div>
-
-          <p className='mt-6 font-secondaryBold font-medium text-white leading-[36.2px] text-[20px]'>
-            Thanks to Stitch, I got my desired wears from a near by Tailor
-          </p>
-
-          <div className='flex justify-end items-end  w-full '>
-            <Image
-              width={50}
-              height={100}
-              alt='logo-sticth'
-              src={"/assets/images/client-say-qtn.png"}
-            />
-          </div>
-        </div>
-
-        <div className=' border border-gray-300 rounded-tl-3xl rounded-br-3xl w-80 h-72 p-2 overflow-hidden '>
-          <div className='flex gap-6 items-center'>
-            <div className=' m-1 w-[100px] h-[100px] rounded-full overflow-hidden ml-'>
-              <Image
-                width={267.37}
-                height={193}
-                alt='logo-sticth'
-                src={"/assets/images/Female.png"}
-              />
-            </div>
-
-            <div className=''>
-              <h4 className='font-extrabold font-playfair text-[24px]  leading-[30.73px]'>
-                Linda Eze
-              </h4>
-              <p className='font-secondaryBold font-medium  leading-[30.73px] text-[24px]'>
-                Entrepreneur
-              </p>
-            </div>
-          </div>
-
-          <p className='mt-6 font-secondaryBold font-medium leading-[36.2px] text-[20px]'>
-            Thanks to Stitch, I got my desired wears from a near by Tailor
-          </p>
-          <div className='flex justify-end items-end  w-full '>
-            <Image
-              width={50}
-              height={100}
-              alt='logo-sticth'
-              src={"/assets/images/client-say-qtn2.png"}
-            />
-          </div>
-        </div>
-
-        <div className=' border border-gray-300 rounded-tl-3xl rounded-br-3xl w-80 h-72 p-2 overflow-hidden bg-[#8B9467]'>
-          <div className='flex gap-6 items-center'>
-            <div className=' m-1 w-[100px] h-[100px] rounded-full overflow-hidden ml-'>
-              <Image
-                width={267.37}
-                height={193}
-                alt='logo-sticth'
-                src={"/assets/images/Female.png"}
-              />
-            </div>
-
-            <div className=''>
-              <h4 className='font-extrabold font-playfair text-white text-[24px]  leading-[30.73px]'>
-                Linda Eze
-              </h4>
-              <p className='font-secondaryBold font-medium text-white leading-[30.73px] text-[24px]'>
-                Entrepreneur
-              </p>
-            </div>
-          </div>
-
-          <p className='mt-6 font-secondaryBold font-medium text-white leading-[36.2px] text-[20px]'>
-            Thanks to Stitch, I got my desired wears from a near by Tailor
-          </p>
-
-          <div className='flex justify-end items-end  w-full '>
-            <Image
-              width={50}
-              height={100}
-              alt='logo-sticth'
-              src={"/assets/images/client-say-qtn.png"}
-            />
-          </div>
-        </div>
+        ))}
       </section>
     </main>
   );
