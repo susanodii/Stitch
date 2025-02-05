@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Popular = () => {
   return (
-    <main className='mt-[4rem]'>
+    <main className='mt-[4rem] '>
       <section className='w-full flex justify-between  items-center'>
         <p className='font-playfair font-medium leading-[16px] text-[20px]'>
           {" "}
@@ -16,152 +16,59 @@ const Popular = () => {
         </Button>
       </section>
 
-      <section className='flex justify-between mt-[2rem] flex-wrap'>
-        <div className='relative border border-gray-300 rounded-lg w-80  overflow-hidden'>
-          <Image
-            width={400}
-            height={382}
-            alt='logo-sticth'
-            src={"/assets/images/pupolar-designs-img.png"}
-          />
+      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-[2rem]'>
+        {Array(4)
+          .fill("")
+          .map((_, index) => (
+            <div
+              key={index}
+              className='relative border border-gray-300 rounded-lg overflow-hidden'
+            >
+              <Image
+                className='w-full h-auto'
+                width={400}
+                height={382}
+                alt='logo-stitch'
+                src={"/assets/images/pupolar-designs-img.png"}
+              />
 
-          {/* Product Details */}
-          <div className='p-4 mt-2'>
-            <h3 className='text-sm text-gray-500'>Crepe</h3>
-            <h2 className='text-lg font-semibold text-gray-800'>
-              Patterned Crepe Long Dress
-            </h2>
-            <p className='text-gray-600 mt-1'>₦26,000</p>
-          </div>
-        </div>
-
-        <div className='relative border border-gray-300 rounded-lg w-80  overflow-hidden'>
-          <Image
-            width={400}
-            height={382}
-            alt='logo-sticth'
-            src={"/assets/images/pupolar-designs-img.png"}
-          />
-
-          {/* Product Details */}
-          <div className='p-4 mt-2'>
-            <h3 className='text-sm text-gray-500'>Crepe</h3>
-            <h2 className='text-lg font-semibold text-gray-800'>
-              Patterned Crepe Long Dress
-            </h2>
-            <p className='text-gray-600 mt-1'>₦26,000</p>
-          </div>
-        </div>
-
-        <div className='relative border border-gray-300 rounded-lg w-80  overflow-hidden'>
-          <Image
-            width={400}
-            height={382}
-            alt='logo-sticth'
-            src={"/assets/images/pupolar-designs-img.png"}
-          />
-
-          {/* Product Details */}
-          <div className='p-4 mt-2'>
-            <h3 className='text-sm text-gray-500'>Crepe</h3>
-            <h2 className='text-lg font-semibold text-gray-800'>
-              Patterned Crepe Long Dress
-            </h2>
-            <p className='text-gray-600 mt-1'>₦26,000</p>
-          </div>
-        </div>
-
-        <div className='relative border border-gray-300 rounded-lg w-80  overflow-hidden'>
-          <Image
-            width={400}
-            height={382}
-            alt='logo-sticth'
-            src={"/assets/images/pupolar-designs-img.png"}
-          />
-
-          {/* Product Details */}
-          <div className='p-4 mt-2'>
-            <h3 className='text-sm text-gray-500'>Crepe</h3>
-            <h2 className='text-lg font-semibold text-gray-800'>
-              Patterned Crepe Long Dress
-            </h2>
-            <p className='text-gray-600 mt-1'>₦26,000</p>
-          </div>
-        </div>
+              {/* Product Details */}
+              <div className='p-4 mt-2'>
+                <h3 className='text-sm text-gray-500'>Crepe</h3>
+                <h2 className='text-lg font-semibold text-gray-800'>
+                  Patterned Crepe Long Dress
+                </h2>
+                <p className='text-gray-600 mt-1'>₦26,000</p>
+              </div>
+            </div>
+          ))}
       </section>
+      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-[2rem]'>
+        {Array(4)
+          .fill("")
+          .map((_, index) => (
+            <div
+              key={index}
+              className='relative border border-gray-300 rounded-lg overflow-hidden'
+            >
+              <Image
+                className='w-full h-auto'
+                width={400}
+                height={382}
+                alt='logo-stitch'
+                src={"/assets/images/pupolar-designs-img.png"}
+              />
 
-      <section className='flex justify-between mt-[2rem] flex-wrap'>
-        <div className='relative border border-gray-300 rounded-lg w-80  overflow-hidden'>
-          <Image
-            width={400}
-            height={382}
-            alt='logo-sticth'
-            src={"/assets/images/pupolar-designs-img.png"}
-          />
-
-          {/* Product Details */}
-          <div className='p-4 mt-2'>
-            <h3 className='text-sm text-gray-500'>Crepe</h3>
-            <h2 className='text-lg font-semibold text-gray-800'>
-              Patterned Crepe Long Dress
-            </h2>
-            <p className='text-gray-600 mt-1'>₦26,000</p>
-          </div>
-        </div>
-
-        <div className='relative border border-gray-300 rounded-lg w-80  overflow-hidden'>
-          <Image
-            width={400}
-            height={382}
-            alt='logo-sticth'
-            src={"/assets/images/pupolar-designs-img.png"}
-          />
-
-          {/* Product Details */}
-          <div className='p-4 mt-2'>
-            <h3 className='text-sm text-gray-500'>Crepe</h3>
-            <h2 className='text-lg font-semibold text-gray-800'>
-              Patterned Crepe Long Dress
-            </h2>
-            <p className='text-gray-600 mt-1'>₦26,000</p>
-          </div>
-        </div>
-
-        <div className='relative border border-gray-300 rounded-lg w-80  overflow-hidden'>
-          <Image
-            width={400}
-            height={382}
-            alt='logo-sticth'
-            src={"/assets/images/pupolar-designs-img.png"}
-          />
-
-          {/* Product Details */}
-          <div className='p-4 mt-2'>
-            <h3 className='text-sm text-gray-500'>Crepe</h3>
-            <h2 className='text-lg font-semibold text-gray-800'>
-              Patterned Crepe Long Dress
-            </h2>
-            <p className='text-gray-600 mt-1'>₦26,000</p>
-          </div>
-        </div>
-
-        <div className='relative border border-gray-300 rounded-lg w-80  overflow-hidden'>
-          <Image
-            width={400}
-            height={382}
-            alt='logo-sticth'
-            src={"/assets/images/pupolar-designs-img.png"}
-          />
-
-          {/* Product Details */}
-          <div className='p-4 mt-2'>
-            <h3 className='text-sm text-gray-500'>Crepe</h3>
-            <h2 className='text-lg font-semibold text-gray-800'>
-              Patterned Crepe Long Dress
-            </h2>
-            <p className='text-gray-600 mt-1'>₦26,000</p>
-          </div>
-        </div>
+              {/* Product Details */}
+              <div className='p-4 mt-2'>
+                <h3 className='text-sm text-gray-500'>Crepe</h3>
+                <h2 className='text-lg font-semibold text-gray-800'>
+                  Patterned Crepe Long Dress
+                </h2>
+                <p className='text-gray-600 mt-1'>₦26,000</p>
+              </div>
+            </div>
+          ))}
       </section>
     </main>
   );

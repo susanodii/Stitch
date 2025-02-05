@@ -39,7 +39,7 @@ const News = () => {
   ];
 
   return (
-    <main className='mt-12 px-4 sm:px-8 lg:px-16'>
+    <main className='mt-12  '>
       {/* Section Header */}
       <section className='w-full flex justify-between items-center mb-6'>
         <p className='font-playfair font-medium text-lg sm:text-xl'>News</p>
