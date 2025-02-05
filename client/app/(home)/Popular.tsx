@@ -43,7 +43,7 @@ const Popular = () => {
             </div>
           ))}
       </section>
-      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-[2rem]'>
+      {/* <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mt-[2rem]'>
         {Array(4)
           .fill("")
           .map((_, index) => (
@@ -59,7 +59,7 @@ const Popular = () => {
                 src={"/assets/images/pupolar-designs-img.png"}
               />
 
-              {/* Product Details */}
+              
               <div className='p-4 mt-2'>
                 <h3 className='text-sm text-gray-500'>Crepe</h3>
                 <h2 className='text-lg font-semibold text-gray-800'>
@@ -69,7 +69,7 @@ const Popular = () => {
               </div>
             </div>
           ))}
-      </section>
+      </section> */}
     </main>
   );
 };
