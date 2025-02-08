@@ -1,8 +1,3 @@
-// import Hero from "./Hero";
-// import OurDiffernce from "./OurDiffernce";
-// import Review from "./Review";
-// import TopRated from "./TopRated";
-
 import Hero from "./Hero";
 import News from "./News";
 import Newsletter from "./Newsletter";

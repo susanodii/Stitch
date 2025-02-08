@@ -30,6 +30,7 @@ export const Hero = () => {
       {/* Right Content */}
       <div className='w-full sm:w-[40%] lg:w-[50%] flex justify-center sm:justify-end mt-8 sm:mt-0'>
         <Image
+          priority
           width={490}
           height={386}
           alt='hero-image'
@@ -42,45 +43,3 @@ export const Hero = () => {
 };
 
 export default Hero;
-
-// import React from "react";
-// import { Button } from "@/components/ui/button";
-// import Image from "next/image";
-
-// export const Hero = () => {
-//   return (
-//     <main className='flex flex-col-reverse sm:flex-row justify-between mb-[4rem] px-4 sm:px-8 '>
-//       <div className='flex flex-col gap-4 w-full sm:w-[609px]  mt-[3rem] '>
-//         <p className='leading-10 text-[20px] sm:leading-[50px] sm:text-[36px] font-medium font-playfair '>
-//           Discover <span className='text-primary'>Fashion </span> That Fits You
-//           Shop Ready-to-Wear or Customize Your Look
-//         </p>
-//         <p className='font-secondaryNormal leading-5 text-[14px] sm:leading-[29px] sm:text-[24px] font-normal text-darkGray '>
-//           From the latest trends to bespoke creations, find your perfect fit
-//           with top designers.
-//         </p>
-
-//         <div className='flex flex-wrap gap-4 sm:gap-8'>
-//           {" "}
-//           <Button className=' bg-primary text-accent rounded-3xl border-primary border font-secondaryExraBold font-semibold leading-[24px] hover:text-primary'>
-//             Discover designers
-//           </Button>
-//           <Button className='bg-accent text-primary rounded-3xl font-secondaryExraBold font-semibold leading-[24px]'>
-//             Create Store
-//           </Button>
-//         </div>
-//       </div>
-//       <div className=' w-full sm:w-auto mt-[4rem] sm:mt-0"'>
-//         {" "}
-//         <Image
-//           width={490}
-//           height={386}
-//           alt='logo-sticth'
-//           src={"/assets/images/hero-img.png"}
-//         />
-//       </div>
-//     </main>
-//   );
-// };
-
-// export default Hero;
