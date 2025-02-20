@@ -7,7 +7,7 @@ import ProductExplore from "./ProductExplore";
 
 export default function page() {
   return (
-    <div className='min-h-screen h-full pl-[4.5rem] pr-[4.5rem] bg-accent pt-4 overflow-y-auto'>
+    <div className='px-4 md:px-10 bg-accent pt-4 overflow-y-auto'>
       <Explore />
       <OurService />
       <OurMission />

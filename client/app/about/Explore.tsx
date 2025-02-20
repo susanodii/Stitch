@@ -5,20 +5,22 @@ import { Button } from "@/components/ui/button";
 const Explore = () => {
   return (
     <main className='mt-[1rem] flex justify-between '>
-      <div className='w-1/2'>
+      <div className=' w-full md:w-1/2'>
         <h2 className='font-sans text-[48px] leading-[60px] font-medium text-black mb-[1rem]'>
           {" "}
           About
         </h2>
 
-        <Image
-          width={200}
-          height={2}
-          alt='logo-sticth'
-          src={"/assets/images/Divider.png"}
-        />
+        <div>
+          <Image
+            width={200}
+            height={2}
+            alt='logo-sticth'
+            src={"/assets/images/Divider.png"}
+          />
+        </div>
 
-        <p className='font-secondaryNormal font-normal text-[16px] leading-[24px] mt-[1rem] '>
+        <p className='  font-secondaryNormal font-normal text-[16px] leading-[24px] mt-[1rem] '>
           Stitch revolutionizes the fashion industry by connecting customers
           with talented fashion designers and bespoke Tailor. With AI-powered
           size recommendations, you will find your ideal outfit effortlessly.
@@ -34,7 +36,7 @@ const Explore = () => {
         </Button>
       </div>
 
-      <div>
+      <div className='hidden md:block '>
         <Image
           width={518.17}
           height={452.46}

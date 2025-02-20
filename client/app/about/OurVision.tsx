@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button";
 
 const OurVision = () => {
   return (
-    <main className='mt-[10rem] flex   justify-between '>
-      <div className='w-1/2'>
+    <main className='mt-[3rem] md:mt-[10rem]  flex   justify-between '>
+      <div className=' w-full md:w-1/2'>
         <h2 className='font-sans text-[48px] leading-[60px] font-medium text-black mb-[1rem]'>
           {" "}
           Vision
@@ -26,7 +26,7 @@ const OurVision = () => {
         </p>
       </div>
 
-      <div>
+      <div className='hidden md:block '>
         <Image
           width={518.17}
           height={452.46}
