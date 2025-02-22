@@ -4,7 +4,7 @@ import FindATailorLayout from "./FindATailorLayout";
 
 const page = () => {
   return (
-    <div>
+    <div className=''>
       <Hero />
       <FindATailorLayout />
     </div>
