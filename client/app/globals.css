@@ -104,3 +104,12 @@
   src: local("Barlow-Medium"),
     url("../components/fonts/Barlow-Medium.otf") format("otf");
 }
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

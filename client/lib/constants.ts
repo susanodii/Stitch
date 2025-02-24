@@ -87,7 +87,7 @@ export const filterItems = {
     },
     {
       label: "Man",
-      count: 40,
+      count: 100,
     },
     {
       label: "Woman",
