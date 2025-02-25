@@ -29,8 +29,54 @@ function ProductLayout() {
   };
 
   return (
-    <section className='w-full h-full justify-center my-10'>
-      <div className='max-w-[1440px] w-full grid grid-cols-8 gap-10   mx-auto'>
+    <section className='w-full my-2  md:my-10 '>
+      <div className='sm:block md:hidden  h-fit  '>
+        <Sheet>
+          <SheetTrigger className='mb-2' asChild>
+            <Button variant='outline'>Open</Button>
+          </SheetTrigger>
+          <SheetContent
+            className=' w-[400px]  
+            
+            
+            h-fit'
+            side='left'
+          >
+            <SheetTrigger asChild>
+              <Button variant='outline'>close</Button>
+            </SheetTrigger>
+
+            <div className='flex col-span-2 h-full  w-full px-4  flex-col gap-2 pt-1 '>
+              <div className='flex justify-between items-center w-full'>
+                <p className='font-bold text-primary'>Filter</p>
+
+                <Button className='bg-accent rounded-full text-primary font-semibold px-6'>
+                  Clear
+                </Button>
+              </div>
+              <div className='border border-gray-400 rounded-lg p-2 mt-2'>
+                <FilterSection
+                  title='Category'
+                  options={filterItems["Category"]}
+                />
+                <FilterSection title='Brand' options={filterItems["Brand"]} />
+                <RatingFilterSection
+                  title='Rating'
+                  options={filterItems["Rating"]}
+                />
+                <FilterSection
+                  title='Cloth'
+                  options={filterItems["Clothing"]}
+                />
+                <RangeFilterSection title='Price' min={0} max={500} unit='$' />
+                <RangeFilterSection title='Size' min={0} max={200} />
+              </div>
+            </div>
+          </SheetContent>
+        </Sheet>
+      </div>
+
+      <div className='max-w-[1440px] w-full grid md:grid-cols-8 gap-10   md:mx-auto'>
         {/* Filter section */}
         <div className='hidden md:flex col-span-2 h-full  w-full px-4  flex-col gap-6 pt-4 '>
           <div className='flex justify-between items-center w-full'>
@@ -55,9 +101,9 @@ function ProductLayout() {
         </div>
 
         {/* Product section */}
-        <aside className='flex flex-col w-full gap-4 col-span-6 h-full overflow-x-hidden min-h-screen overflow-y-scroll'>
-          <div className='flex justify-between items-center'>
-            <div className='min-w-1/4 w-full'>
+        <aside className='flex flex-col w-full gap-4 col-span-6 h-full  min-h-screen overflow-y-scroll'>
+          <div className=' flex flex-col md:flex-row justify-between md:items-center'>
+            <div className=' w-full md:min-w-1/4'>
               <SearchInput placeholder='search' />
             </div>
             <div className='p-4'>
@@ -71,10 +117,12 @@ function ProductLayout() {
               />
             </div>
           </div>
-          <div className='col-span-6 grid gap-10 h-full w-full px-4  '>
-            <div className='grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2'>
+          <div className='col-span-6 grid gap-10 h-full w-full px-4 '>
+            <div className='grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2  overflow-hidden'>
               {poducts.map((item, idx) => (
-                <ProductCard key={idx} {...item} />
+                <div className='w-full'>
+                  <ProductCard key={idx} {...item} />
+                </div>
               ))}
             </div>
             <div className='place-self-end align-baseline'>
@@ -82,41 +130,6 @@ function ProductLayout() {
             </div>
           </div>
         </aside>
-      </div>
-
-      <div className='sm:block md:hidden'>
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant='outline'>Open</Button>
-          </SheetTrigger>
-          <SheetContent>
-            <SheetHeader>
-              <SheetTitle>Edit profile</SheetTitle>
-              <SheetDescription>
-                Make changes to your profile here. Click save when you're done.
-              </SheetDescription>
-            </SheetHeader>
-            <div className='grid gap-4 py-4'>
-              <div className='grid grid-cols-4 items-center gap-4'>
-                <Label htmlFor='name' className='text-right'>
-                  Name
-                </Label>
-                <Input id='name' value='Pedro Duarte' className='col-span-3' />
-              </div>
-              <div className='grid grid-cols-4 items-center gap-4'>
-                <Label htmlFor='username' className='text-right'>
-                  Username
-                </Label>
-                <Input id='username' value='@peduarte' className='col-span-3' />
-              </div>
-            </div>
-            <SheetFooter>
-              <SheetClose asChild>
-                <Button type='submit'>Save changes</Button>
-              </SheetClose>
-            </SheetFooter>
-          </SheetContent>
-        </Sheet>
       </div>
     </section>
   );
