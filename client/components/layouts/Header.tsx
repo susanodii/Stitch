@@ -48,9 +48,14 @@ function Header() {
             </div>
             <div className='flex gap-2 items-center'>
               <FiShoppingCart className='text-primary' size={24} />
-              <Button className='bg-primary text-white rounded-3xl'>
-                Register
-              </Button>
+
+              <Link href='/signup'>
+                {" "}
+                <Button className='bg-primary text-white rounded-3xl transition delay-150 duration-300 ease-in-out  hover:text-primary border-primary border '>
+                  Register
+                </Button>
+              </Link>
+
               <Button className='bg-accent text-primary rounded-3xl border-primary border'>
                 Login
               </Button>
