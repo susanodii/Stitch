@@ -4,6 +4,7 @@ import express, { Application, Request, Response } from 'express'
 import globalErrorHandler from './app/middlewares/globalErrorHandler'
 import notFoundAPIHandler from './app/middlewares/notFoundAPIHandler'
 import router from './app/routes'
+import '@/styles/globals.css';
 
 const app: Application = express()
 

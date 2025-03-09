@@ -9,6 +9,7 @@ const config = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+
   prefix: "",
   theme: {
     container: {
@@ -31,8 +32,6 @@ const config = {
         // => @media (min-width: 1400px) { ... }
       },
     },
-
-
 
     extend: {
       fontFamily: {
@@ -72,8 +71,8 @@ const config = {
           foreground: "hsl(var(--accent-foreground))",
         },
         text: {
-          DEFAULT: '#8F8F8F',
-          100: '#292929'
+          DEFAULT: "#8F8F8F",
+          100: "#292929",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
