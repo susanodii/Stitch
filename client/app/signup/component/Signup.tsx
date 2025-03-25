@@ -1,30 +1,33 @@
+"use client";
+
 import React from "react";
 import Image from "next/image";
 
-import * as React from "react";
-import * as LabelPrimitive from "@radix-ui/react-label";
-import { Slot } from "@radix-ui/react-slot";
-import {
-  Controller,
-  FormProvider,
-  useFormContext,
-  type ControllerProps,
-  type FieldPath,
-  type FieldValues,
-} from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 
-import { cn } from "@/lib/utils";
-import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
+import {
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/forminputs/CustomFormInput";
+import { Input } from "@/components/ui/input";
 
 const Signup = () => {
   return (
-    <section className='bg-[#ECECE0] flex pt-[3rem] px-[4rem] h-lvh'>
-      <div className=''>
+    <section className='bg-[#ECECE0] flex pt-[3rem] px-[4rem] h-lvh justify-around'>
+      <div className='w-1/2'>
         <div className='flex  items-center gap-3'>
           <Image
             priority
-            width={50}
-            height={50}
+            width={100}
+            height={100}
             alt='hero-image'
             src='/assets/images/logo1.png'
             className=''
@@ -50,9 +53,14 @@ const Signup = () => {
       </div>
 
       {/* form */}
-      <div>
+      <div className='bg-white px-10 py-8 flex-1'>
         <p className='text-3xl mb-[2rem]'>Sign up now</p>
-        <LoginForm />
+        <div className='flex gap-4'>
+          <Button>Designer</Button>
+          <Button>Buyer</Button>
+        </div>
+
+        <SignUpForm />
       </div>
     </section>
   );
@@ -60,169 +68,155 @@ const Signup = () => {
 
 export default Signup;
 
-const LoginForm = () => {
-  "use client";
+export function SignUpForm() {
+  const form = useForm();
 
-  const Form = FormProvider;
+  return (
+    <div className='  p-6  '>
+      <Form {...form}>
+        <form className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          {/* First Name */}
+          <FormField
+            control={form.control}
+            name='firstName'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>First Name</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder='First Name'
+                    {...field}
+                    className='w-full'
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
 
-  type FormFieldContextValue<
-    TFieldValues extends FieldValues = FieldValues,
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
-  > = {
-    name: TName;
-  };
+          {/* Last Name */}
+          <FormField
+            control={form.control}
+            name='lastName'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Last Name</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder='Last Name'
+                    {...field}
+                    className='w-full'
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
 
-  const FormFieldContext = React.createContext<FormFieldContextValue>(
-    {} as FormFieldContextValue
+          {/* Email */}
+          <FormField
+            control={form.control}
+            name='email'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Email</FormLabel>
+                <FormControl>
+                  <Input placeholder='Email' {...field} className='w-full' />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+
+          {/* Phone Number */}
+          <FormField
+            control={form.control}
+            name='phoneNumber'
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Phone Number</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder='Phone Number'
+                    {...field}
+                    className='w-full'
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+
+          {/* Address */}
+          <FormField
+            control={form.control}
+            name='address'
+            render={({ field }) => (
+              <FormItem className='md:col-span-2'>
+                <FormLabel>Address/Location</FormLabel>
+                <FormControl>
+                  <Input
+                    placeholder='Address/Location'
+                    {...field}
+                    className='w-full'
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+
+          {/* Password */}
+          <FormField
+            control={form.control}
+            name='password'
+            render={({ field }) => (
+              <FormItem className='md:col-span-2'>
+                <FormLabel className='flex justify-between'>
+                  <p>Password</p>
+                  <div className='flex gap-2 items-center'>
+                    <Image
+                      priority
+                      width={20}
+                      height={20}
+                      alt='hide'
+                      src='/assets/images/hide.png'
+                    />
+                    <p>Hide</p>
+                  </div>
+                </FormLabel>
+                <FormControl>
+                  <Input
+                    type='password'
+                    placeholder='Password'
+                    {...field}
+                    className='w-full'
+                  />
+                </FormControl>
+              </FormItem>
+            )}
+          />
+
+          <div className='flex gap-2 items-center w-full md:col-span-2 mt-[1.5rem]'>
+            <Image
+              priority
+              width={20}
+              height={20}
+              alt='hide'
+              src='/assets/images/checked.png'
+            />
+            <p className=''>
+              By creating an account, I agree to our Terms of use and Privacy
+              Policy{" "}
+            </p>
+          </div>
+          {/* Submit Button */}
+          <div className='flex items-center gap-2 md:col-span-2  '>
+            <div>
+              <Button type='submit' className=''>
+                Sign Up
+              </Button>
+            </div>
+
+            <p className='py-4'>Already have an account? Log in </p>
+          </div>
+        </form>
+      </Form>
+    </div>
   );
-
-  const FormField = <
-    TFieldValues extends FieldValues = FieldValues,
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>
-  >({
-    ...props
-  }: ControllerProps<TFieldValues, TName>) => {
-    return (
-      <FormFieldContext.Provider value={{ name: props.name }}>
-        <Controller {...props} />
-      </FormFieldContext.Provider>
-    );
-  };
-
-  const useFormField = () => {
-    const fieldContext = React.useContext(FormFieldContext);
-    const itemContext = React.useContext(FormItemContext);
-    const { getFieldState, formState } = useFormContext();
-
-    const fieldState = getFieldState(fieldContext.name, formState);
-
-    if (!fieldContext) {
-      throw new Error("useFormField should be used within <FormField>");
-    }
-
-    const { id } = itemContext;
-
-    return {
-      id,
-      name: fieldContext.name,
-      formItemId: `${id}-form-item`,
-      formDescriptionId: `${id}-form-item-description`,
-      formMessageId: `${id}-form-item-message`,
-      ...fieldState,
-    };
-  };
-
-  type FormItemContextValue = {
-    id: string;
-  };
-
-  const FormItemContext = React.createContext<FormItemContextValue>(
-    {} as FormItemContextValue
-  );
-
-  const FormItem = React.forwardRef<
-    HTMLDivElement,
-    React.HTMLAttributes<HTMLDivElement>
-  >(({ className, ...props }, ref) => {
-    const id = React.useId();
-
-    return (
-      <FormItemContext.Provider value={{ id }}>
-        <div ref={ref} className={cn("space-y-2", className)} {...props} />
-      </FormItemContext.Provider>
-    );
-  });
-  FormItem.displayName = "FormItem";
-
-  const FormLabel = React.forwardRef<
-    React.ElementRef<typeof LabelPrimitive.Root>,
-    React.ComponentPropsWithoutRef<typeof LabelPrimitive.Root>
-  >(({ className, ...props }, ref) => {
-    const { error, formItemId } = useFormField();
-
-    return (
-      <Label
-        ref={ref}
-        className={cn(error && "text-destructive", className)}
-        htmlFor={formItemId}
-        {...props}
-      />
-    );
-  });
-  FormLabel.displayName = "FormLabel";
-
-  const FormControl = React.forwardRef<
-    React.ElementRef<typeof Slot>,
-    React.ComponentPropsWithoutRef<typeof Slot>
-  >(({ ...props }, ref) => {
-    const { error, formItemId, formDescriptionId, formMessageId } =
-      useFormField();
-
-    return (
-      <Slot
-        ref={ref}
-        id={formItemId}
-        aria-describedby={
-          !error
-            ? `${formDescriptionId}`
-            : `${formDescriptionId} ${formMessageId}`
-        }
-        aria-invalid={!!error}
-        {...props}
-      />
-    );
-  });
-  FormControl.displayName = "FormControl";
-
-  const FormDescription = React.forwardRef<
-    HTMLParagraphElement,
-    React.HTMLAttributes<HTMLParagraphElement>
-  >(({ className, ...props }, ref) => {
-    const { formDescriptionId } = useFormField();
-
-    return (
-      <p
-        ref={ref}
-        id={formDescriptionId}
-        className={cn("text-[0.8rem] text-muted-foreground", className)}
-        {...props}
-      />
-    );
-  });
-  FormDescription.displayName = "FormDescription";
-
-  const FormMessage = React.forwardRef<
-    HTMLParagraphElement,
-    React.HTMLAttributes<HTMLParagraphElement>
-  >(({ className, children, ...props }, ref) => {
-    const { error, formMessageId } = useFormField();
-    const body = error ? String(error?.message ?? "") : children;
-
-    if (!body) {
-      return null;
-    }
-
-    return (
-      <p
-        ref={ref}
-        id={formMessageId}
-        className={cn("text-[0.8rem] font-medium text-destructive", className)}
-        {...props}
-      >
-        {body}
-      </p>
-    );
-  });
-  FormMessage.displayName = "FormMessage";
-
-  // export {
-  //   useFormField,
-  //   Form,
-  //   FormItem,
-  //   FormLabel,
-  //   FormControl,
-  //   FormDescription,
-  //   FormMessage,
-  //   FormField,
-  // };
-};
+}
