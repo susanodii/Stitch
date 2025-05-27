@@ -176,10 +176,10 @@ const FindATailorLayout = () => {
                   </p>
 
                   <div className='flex gap-8 mt-[3rem]'>
-                    <Button className='bg-primary text-accent rounded-3xl w-full sm:w-[100px] border-primary border font-secondaryExraBold font-semibold leading-[24px]'>
+                    <Button className='bg-primary text-accent  w-full sm:w-[100px] border-primary border font-secondaryExraBold font-semibold leading-[24px]'>
                       Chat
                     </Button>
-                    <Button className='bg-accent text-primary rounded-3xl w-full sm:w-[100px] font-secondaryExraBold font-semibold leading-[24px]'>
+                    <Button className='bg-accent text-primary  w-full sm:w-[100px] font-secondaryExraBold font-semibold leading-[24px]'>
                       Book
                     </Button>
                   </div>

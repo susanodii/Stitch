@@ -36,27 +36,31 @@ function Header() {
               src={"/assets/images/stitch-logo.svg"}
             />
             <div className='flex gap-8 items-center font-medium '>
-              {headerLinks.map((link, idx) => (
-                <Link
-                  className='hover:border-b-primary hover:border-b-2'
-                  key={idx}
-                  href={link.url}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              <div className='flex gap-[2rem] items-center'>
+                {headerLinks.map((link, idx) => (
+                  <Link
+                    className='hover:border-b-primary hover:border-b-2'
+                    key={idx}
+                    href={link.url}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+
+                <Button> Sign Up as a Designer</Button>
+              </div>
             </div>
             <div className='flex gap-2 items-center'>
               <FiShoppingCart className='text-primary' size={24} />
 
               <Link href='/signup'>
                 {" "}
-                <Button className='bg-primary text-white rounded-3xl transition delay-150 duration-300 ease-in-out  hover:text-primary border-primary border '>
-                  Register
+                <Button className='bg-primary text-white  transition delay-150 duration-300 ease-in-out  hover:text-primary border-primary border '>
+                  Sign Up
                 </Button>
               </Link>
 
-              <Button className='bg-accent text-primary rounded-3xl border-primary border'>
+              <Button className='bg-accent text-primary  border-primary border'>
                 Login
               </Button>
             </div>
