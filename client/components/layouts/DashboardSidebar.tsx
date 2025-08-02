@@ -61,7 +61,7 @@ function DashboardSidebar() {
       </Sheet>
 
       {/* Sidebar for Desktop */}
-      <nav className="hidden lg:block w-64 h-screen bg-primary p-6 text-white">
+      <nav className="hidden lg:block w-64 h-auto bg-primary p-6 text-white">
         <div className="flex items-center justify-between mb-8">
           <Image priority width={100} height={40} alt="logo-stitch" src={'/assets/images/Logo(whte).svg'} />
         </div>

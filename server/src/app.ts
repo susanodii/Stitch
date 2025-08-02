@@ -6,6 +6,7 @@ import notFoundAPIHandler from './app/middlewares/notFoundAPIHandler'
 import router from './app/routes'
 
 
+
 const app: Application = express()
 
 //parsers
@@ -16,6 +17,7 @@ app.use(cookieParser())
 // app.use(cors({ origin: ['http://localhost:5173'], credentials: true }));
 
 /** use for credentials: false */
+import 'g'
 app.use(cors())
 
 // application routes

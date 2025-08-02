@@ -83,11 +83,11 @@ const TopRated = () => {
       </section>
 
       {/* Card Section */}
-      <section className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4 justify-items-center'>
+      <section className='grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-4 justify-items-center'>
         {topRatedDetails.map((store, index) => (
           <Card
             key={index}
-            className='w-full sm:w-[300px] md:w-[350px] lg:w-[400px]'
+            className='w-full sm:w-[300px] md:w-[350px] lg:w-[300px]'
           >
             <Image
               width={400}
