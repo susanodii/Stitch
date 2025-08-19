@@ -55,14 +55,18 @@ function Header() {
 
               <Link href='/signup'>
                 {" "}
-                <Button className='bg-primary text-white  transition delay-150 duration-300 ease-in-out  hover:text-primary border-primary border '>
+                <Button className='bg-primary text-white  transition delay-150 duration-300 ease-in-out   border-primary border '>
                   Sign Up
                 </Button>
               </Link>
 
-              <Button className='bg-accent text-primary  border-primary border'>
+<Link href='/sign-in'>
+ <Button className='bg-accent text-primary  border-primary border'>
                 Login
               </Button>
+
+</Link>
+             
             </div>
           </section>
         </nav>

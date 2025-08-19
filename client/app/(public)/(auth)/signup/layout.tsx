@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import { Inter as FontSans } from "next/font/google";
-import { Playfair_Display, Barlow } from "next/font/google";
-import { cn } from "@/lib/utils";
-import "../globals.css";
+
+
 
 export const metadata: Metadata = {
   title: "Stitch App",

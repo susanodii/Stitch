@@ -7,17 +7,12 @@ import "../globals.css";
 import Header from "@/components/layouts/Header";
 import Footer from "@/components/layouts/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-// const barlow = Barlow({
-//   subsets: ["latin"],
-//   variable: "--font-barlow",
-// });
+
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
