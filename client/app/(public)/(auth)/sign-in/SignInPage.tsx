@@ -83,7 +83,7 @@ export function SignUpForm() {
         <p className="mb-[2rem]">
           Don't have an account?
 
-<Link href="/sign-up" className="text-blue-500 hover:underline ml-1"> 
+<Link href="/signup" className="text-blue-500 hover:underline ml-1"> 
 Sign up
 </Link>
         </p>

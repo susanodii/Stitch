@@ -7,6 +7,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
+
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -18,6 +19,31 @@ import {
   FormMessage,
 } from "@/components/forminputs/CustomFormInput";
 import { Input } from "@/components/ui/input";
+import Link from "next/link";
+
+
+
+// // Import the functions you need from the SDKs you need
+// import { initializeApp } from "firebase/app";
+// import { getAnalytics } from "firebase/analytics";
+// // TODO: Add SDKs for Firebase products that you want to use
+// // https://firebase.google.com/docs/web/setup#available-libraries
+
+// // Your web app's Firebase configuration
+// // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: "AIzaSyAUpkeO73L8JJ5ZOy7ZQu3vxrOty7w6CZ8",
+//   authDomain: "stich-d3357.firebaseapp.com",
+//   projectId: "stich-d3357",
+//   storageBucket: "stich-d3357.firebasestorage.app",
+//   messagingSenderId: "943316088581",
+//   appId: "1:943316088581:web:2510dd69d0f446e6e0696c",
+//   measurementId: "G-8KZP67LZ4Q"
+// };
+
+// // Initialize Firebase
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 
 const Signup = () => {
   return (
@@ -210,11 +236,8 @@ export function SignUpForm() {
                       className='w-full'
                     />
                   </FormControl>
-                </FormItem>
-              )}
-            />
 
-            <div className='flex gap-2 items-center w-full md:col-span-2 mt-[1.5rem]'>
+   <div className='flex gap-2 items-center mt-[2rem] w-full md:col-span-2 mt-[1.5rem]'>
               <Image
                 priority
                 width={20}
@@ -226,13 +249,34 @@ export function SignUpForm() {
                 By creating an account, I agree to our Terms of use and Privacy
                 Policy{" "}
               </p>
+
             </div>
+
+                  
+                   <div className="border-t  w-full">
+                <Button className="" size='full'>Login</Button>
+              </div>
+                </FormItem>
+              )}
+              
+            />
+
+         
+        
             {/* Submit Button */}
             <div className='flex items-center gap-2 md:col-span-2  '>
-              <p className='py-4'>Already have an account? </p>
-              <div>
-                <Button type='submit'>Login</Button>
-              </div>
+              <p className='py-4'>Already have an account?  
+                
+                <span className=' cursor-pointer'  >
+                  	<Link
+						href="/sign-in"
+						className="text-green-600 underline"
+					>
+						Sign In
+					</Link>
+                </span>
+                 </p>
+             
             </div>
           </form>
         </div>
